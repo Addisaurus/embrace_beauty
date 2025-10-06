@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our premium services - Embrace Nails, Embrace Spa, and Embrace Hair. Luxury beauty treatments tailored to elevate your natural radiance.">
+    <meta name="keywords" content="spa services, nail services, hair salon, manicure, pedicure, massage, facial, hair styling">
+    <meta name="author" content="Embrace Beauty">
+
+    <title>Services - Embrace Beauty</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Full-Screen Background Gradient -->
+    <div class="page-background"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                ☰
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html#book" class="btn-nav">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <main>
+        <section class="page-section">
+            <div class="page-header">
+                <h1 class="page-title">Our Services</h1>
+                <p class="page-subtitle">Experience Excellence in Every Detail</p>
+            </div>
+
+            <div class="services-container">
+                <div class="services-grid">
+                    <!-- Embrace Nails -->
+                    <article class="service-card">
+                        <h3>Embrace Nails</h3>
+                        <p>
+                            Indulge in luxurious nail care with our expert technicians. From classic manicures to intricate nail art,
+                            we offer premium treatments using high-quality products for stunning, long-lasting results.
+                        </p>
+                        <ul style="list-style: none; padding: 0; margin: 1.5rem 0; color: var(--color-primary-lightest); font-size: 0.95rem; line-height: 1.8;">
+                            <li>✦ Signature Manicures & Pedicures</li>
+                            <li>✦ Gel & Acrylic Extensions</li>
+                            <li>✦ Custom Nail Art</li>
+                            <li>✦ Spa Treatments</li>
+                        </ul>
+                        <a href="contact.html" class="btn">Learn More</a>
+                    </article>
+
+                    <!-- Embrace Spa -->
+                    <article class="service-card">
+                        <h3>Embrace Spa</h3>
+                        <p>
+                            Escape to tranquility with our holistic spa treatments. Our skilled therapists provide personalized
+                            experiences designed to rejuvenate your body, calm your mind, and restore your natural glow.
+                        </p>
+                        <ul style="list-style: none; padding: 0; margin: 1.5rem 0; color: var(--color-primary-lightest); font-size: 0.95rem; line-height: 1.8;">
+                            <li>✦ Therapeutic Massage</li>
+                            <li>✦ Luxury Facials</li>
+                            <li>✦ Body Treatments</li>
+                            <li>✦ Aromatherapy</li>
+                        </ul>
+                        <a href="contact.html" class="btn">Learn More</a>
+                    </article>
+
+                    <!-- Embrace Hair -->
+                    <article class="service-card">
+                        <h3>Embrace Hair</h3>
+                        <p>
+                            Transform your look with our professional hair services. Our talented stylists stay ahead of trends
+                            while honoring timeless techniques to create styles that enhance your unique beauty.
+                        </p>
+                        <ul style="list-style: none; padding: 0; margin: 1.5rem 0; color: var(--color-primary-lightest); font-size: 0.95rem; line-height: 1.8;">
+                            <li>✦ Precision Cuts & Styling</li>
+                            <li>✦ Color & Highlights</li>
+                            <li>✦ Keratin Treatments</li>
+                            <li>✦ Special Occasion Styling</li>
+                        </ul>
+                        <a href="contact.html" class="btn">Learn More</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Embrace Beauty. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Scroll Effects -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
