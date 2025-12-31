@@ -641,3 +641,56 @@ p {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ========================================
+   BOOKING SECTION (VAGARO INTEGRATION)
+   ======================================== */
+.booking-section {
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.booking-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.booking-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: 0.05em;
+}
+
+.booking-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-primary-lightest);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-lg);
+}
+
+.vagaro-widget-wrapper {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: var(--spacing-md);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for booking section */
+@media (max-width: 768px) {
+  .booking-section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    min-height: auto;
+  }
+
+  .vagaro-widget-wrapper {
+    padding: var(--spacing-sm);
+  }
+}
