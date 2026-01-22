@@ -7,15 +7,13 @@
    CSS CUSTOM PROPERTIES (VARIABLES)
    ======================================== */
 :root {
-  /* Color Palette - Updated to Pale Grey */
-  --color-primary-dark: #2C2C2C;
-  --color-primary-mid: #5A5A5A;
-  --color-primary-light: #8A8A8A;
-  --color-primary-lightest: #E8E8E8;
+  /* Color Palette */
+  --color-primary-dark: #3B5D75;
+  --color-primary-mid: #7598AE;
+  --color-primary-light: #C2D2DA;
+  --color-primary-lightest: #EBF2F5;
   --color-white: #FFFFFF;
-  --color-accent-dark: #1A1A1A;
-  --color-background: #F5F5F5;
-  --color-text: #2C2C2C;
+  --color-accent-dark: #253B4B;
 
   /* Typography */
   --font-heading: 'Playfair Display', serif;
@@ -48,10 +46,10 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: var(--color-text);
+  color: var(--color-white);
   line-height: 1.6;
   overflow-x: hidden;
-  background-color: var(--color-background);
+  background-color: var(--color-primary-dark);
 }
 
 /* ========================================
@@ -96,7 +94,7 @@ p {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-primary-lightest) 100%);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary-mid) 100%);
 }
 
 .hero-background::after,
@@ -107,7 +105,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(245, 245, 245, 0.3);
+  background: rgba(37, 59, 75, 0.3);
   backdrop-filter: blur(2px);
 }
 
@@ -120,16 +118,15 @@ p {
   left: 0;
   width: 100%;
   padding: var(--spacing-md) var(--spacing-lg);
-  background: rgba(245, 245, 245, 0.9);
+  background: rgba(59, 93, 117, 0.1);
   backdrop-filter: blur(10px);
   z-index: 1000;
   transition: var(--transition-smooth);
 }
 
 .navbar.scrolled {
-  background: rgba(245, 245, 245, 0.98);
+  background: rgba(37, 59, 75, 0.95);
   padding: var(--spacing-sm) var(--spacing-lg);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -148,7 +145,7 @@ p {
 }
 
 .nav-links li a {
-  color: var(--color-text);
+  color: var(--color-white);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -165,7 +162,7 @@ p {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--color-text);
+  background: var(--color-white);
   transition: var(--transition-smooth);
 }
 
@@ -174,16 +171,15 @@ p {
 }
 
 .nav-links li a:hover {
-  color: var(--color-primary-mid);
+  color: var(--color-primary-light);
 }
 
 /* Book Now Button in Nav */
 .nav-links li a.btn-nav {
-  border: 1px solid var(--color-text);
+  border: 1px solid var(--color-white);
   padding: 0.6rem 1.5rem;
   border-radius: 2px;
   transition: var(--transition-smooth);
-  color: var(--color-text);
 }
 
 .nav-links li a.btn-nav::after {
@@ -191,8 +187,8 @@ p {
 }
 
 .nav-links li a.btn-nav:hover {
-  background: var(--color-text);
-  color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-primary-dark);
 }
 
 /* ========================================
@@ -231,7 +227,7 @@ p {
 .tagline {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
   margin-bottom: var(--spacing-lg);
-  color: var(--color-primary-mid);
+  color: var(--color-primary-lightest);
   font-weight: 300;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -243,9 +239,9 @@ p {
 .btn {
   display: inline-block;
   padding: 1rem 3rem;
-  border: 2px solid var(--color-text);
+  border: 2px solid var(--color-white);
   background: transparent;
-  color: var(--color-text);
+  color: var(--color-white);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -258,21 +254,21 @@ p {
 }
 
 .btn:hover {
-  background: var(--color-text);
-  color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-primary-dark);
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary {
-  background: var(--color-text);
-  color: var(--color-white);
-  border-color: var(--color-text);
+  background: var(--color-white);
+  color: var(--color-primary-dark);
+  border-color: var(--color-white);
 }
 
 .btn-primary:hover {
   background: transparent;
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 /* ========================================
@@ -302,7 +298,7 @@ p {
 
 .page-subtitle {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--color-primary-mid);
+  color: var(--color-primary-lightest);
   font-weight: 300;
   letter-spacing: 0.1em;
 }
@@ -324,9 +320,9 @@ p {
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: var(--spacing-lg);
   text-align: center;
   transition: var(--transition-smooth);
@@ -334,19 +330,19 @@ p {
 }
 
 .service-card:hover {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .service-card h3 {
   margin-bottom: var(--spacing-md);
-  color: var(--color-text);
+  color: var(--color-white);
   font-size: clamp(1.75rem, 3vw, 2.25rem);
 }
 
 .service-card p {
-  color: var(--color-primary-mid);
+  color: var(--color-primary-lightest);
   margin-bottom: var(--spacing-md);
   line-height: 1.8;
 }
@@ -368,16 +364,16 @@ p {
 }
 
 .about-content {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: var(--spacing-lg);
   border-radius: 4px;
   margin-top: var(--spacing-lg);
 }
 
 .about-content p {
-  color: var(--color-primary-mid);
+  color: var(--color-primary-lightest);
   line-height: 1.9;
   margin-bottom: var(--spacing-md);
   text-align: left;
@@ -404,9 +400,9 @@ p {
 }
 
 .contact-form {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: var(--spacing-lg);
   border-radius: 4px;
 }
@@ -421,16 +417,16 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.875rem;
-  color: var(--color-primary-mid);
+  color: var(--color-primary-light);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
   font-family: var(--font-body);
   font-size: 1rem;
   border-radius: 2px;
@@ -450,9 +446,9 @@ p {
 }
 
 .contact-info {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: var(--spacing-lg);
   border-radius: 4px;
 }
@@ -464,12 +460,12 @@ p {
 
 .info-item {
   margin-bottom: var(--spacing-sm);
-  color: var(--color-primary-mid);
+  color: var(--color-primary-lightest);
   text-align: center;
 }
 
 .info-item strong {
-  color: var(--color-text);
+  color: var(--color-white);
   display: block;
   margin-bottom: 0.25rem;
   font-weight: 500;
@@ -480,7 +476,7 @@ p {
    FOOTER
    ======================================== */
 .footer {
-  background: rgba(44, 44, 44, 0.95);
+  background: rgba(37, 59, 75, 0.5);
   backdrop-filter: blur(10px);
   padding: var(--spacing-md);
   text-align: center;
@@ -494,7 +490,7 @@ p {
 
 .footer p {
   font-size: 0.875rem;
-  color: var(--color-primary-lightest);
+  color: var(--color-primary-light);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -506,7 +502,7 @@ p {
 }
 
 .social-links a {
-  color: var(--color-primary-lightest);
+  color: var(--color-primary-light);
   text-decoration: none;
   font-size: 0.875rem;
   text-transform: uppercase;
@@ -525,7 +521,7 @@ p {
   display: none;
   background: none;
   border: none;
-  color: var(--color-text);
+  color: var(--color-white);
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
@@ -574,7 +570,7 @@ p {
     right: -100%;
     width: 70%;
     height: 100vh;
-    background: rgba(245, 245, 245, 0.98);
+    background: rgba(37, 59, 75, 0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;
     justify-content: center;
