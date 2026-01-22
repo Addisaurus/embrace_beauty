@@ -215,10 +215,10 @@ p {
 }
 
 .logo {
-  max-width: 300px;
+  max-width: 450px;
   height: auto;
   margin-bottom: var(--spacing-md);
-  filter: brightness(1.1);
+  filter: brightness(1);
 }
 
 .brand-name {
@@ -592,7 +592,7 @@ p {
   }
 
   .logo {
-    max-width: 200px;
+    max-width: 300px;
   }
 
   .services-grid {
@@ -616,7 +616,7 @@ p {
   }
 
   .logo {
-    max-width: 150px;
+    max-width: 220px;
   }
 
   .service-card,
