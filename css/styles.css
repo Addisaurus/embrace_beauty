@@ -8,11 +8,13 @@
    ======================================== */
 :root {
   /* Color Palette */
-  --color-primary-dark: #3B5D75;
-  --color-primary-mid: #7598AE;
+  --color-primary-dark: #8baeff;
+  --color-primary-mid: #dee8ff;
   --color-primary-light: #C2D2DA;
   --color-primary-lightest: #EBF2F5;
   --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-text: #000000;
   --color-accent-dark: #253B4B;
 
   /* Typography */
@@ -46,7 +48,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: var(--color-white);
+  color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
   background-color: var(--color-primary-dark);
@@ -125,8 +127,17 @@ p {
 }
 
 .navbar.scrolled {
-  background: rgba(37, 59, 75, 0.95);
   padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.nav-logo {
+  height: 60px;
+  width: auto;
+  transition: var(--transition-smooth);
+}
+
+.nav-logo:hover {
+  opacity: 0.8;
 }
 
 .nav-container {
@@ -145,7 +156,7 @@ p {
 }
 
 .nav-links li a {
-  color: var(--color-white);
+  color: var(--color-text);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -162,7 +173,7 @@ p {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--color-white);
+  background: var(--color-text);
   transition: var(--transition-smooth);
 }
 
@@ -171,12 +182,12 @@ p {
 }
 
 .nav-links li a:hover {
-  color: var(--color-primary-light);
+  color: var(--color-accent-dark);
 }
 
 /* Book Now Button in Nav */
 .nav-links li a.btn-nav {
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-text);
   padding: 0.6rem 1.5rem;
   border-radius: 2px;
   transition: var(--transition-smooth);
@@ -187,8 +198,8 @@ p {
 }
 
 .nav-links li a.btn-nav:hover {
-  background: var(--color-white);
-  color: var(--color-primary-dark);
+  background: var(--color-text);
+  color: var(--color-white);
 }
 
 /* ========================================
@@ -211,10 +222,9 @@ p {
 }
 
 .logo {
-  max-width: 300px;
+  max-width: 450px;
   height: auto;
   margin-bottom: var(--spacing-md);
-  filter: brightness(1.1);
 }
 
 .brand-name {
@@ -227,7 +237,7 @@ p {
 .tagline {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
   margin-bottom: var(--spacing-lg);
-  color: var(--color-primary-lightest);
+  color: var(--color-text);
   font-weight: 300;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -239,9 +249,9 @@ p {
 .btn {
   display: inline-block;
   padding: 1rem 3rem;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-text);
   background: transparent;
-  color: var(--color-white);
+  color: var(--color-text);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -254,21 +264,21 @@ p {
 }
 
 .btn:hover {
-  background: var(--color-white);
-  color: var(--color-primary-dark);
+  background: var(--color-text);
+  color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary {
-  background: var(--color-white);
-  color: var(--color-primary-dark);
-  border-color: var(--color-white);
+  background: var(--color-text);
+  color: var(--color-white);
+  border-color: var(--color-text);
 }
 
 .btn-primary:hover {
   background: transparent;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 /* ========================================
@@ -298,7 +308,7 @@ p {
 
 .page-subtitle {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--color-primary-lightest);
+  color: var(--color-text);
   font-weight: 300;
   letter-spacing: 0.1em;
 }
@@ -337,12 +347,12 @@ p {
 
 .service-card h3 {
   margin-bottom: var(--spacing-md);
-  color: var(--color-white);
+  color: var(--color-text);
   font-size: clamp(1.75rem, 3vw, 2.25rem);
 }
 
 .service-card p {
-  color: var(--color-primary-lightest);
+  color: var(--color-text);
   margin-bottom: var(--spacing-md);
   line-height: 1.8;
 }
@@ -373,7 +383,7 @@ p {
 }
 
 .about-content p {
-  color: var(--color-primary-lightest);
+  color: var(--color-text);
   line-height: 1.9;
   margin-bottom: var(--spacing-md);
   text-align: left;
@@ -381,6 +391,161 @@ p {
 
 .about-content p:last-child {
   margin-bottom: 0;
+}
+
+/* ========================================
+   PRICING SECTION
+   ======================================== */
+.pricing-container {
+  max-width: 600px;
+  width: 100%;
+  padding: var(--spacing-md);
+}
+
+.pricing-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+}
+
+.pricing-item {
+  display: flex;
+  align-items: baseline;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.pricing-item:last-child {
+  border-bottom: none;
+}
+
+.pricing-service {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.pricing-dots {
+  flex: 1;
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.2);
+  margin: 0 var(--spacing-sm);
+  min-width: 20px;
+}
+
+.pricing-price {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+/* ========================================
+   TEAM SECTION
+   ======================================== */
+.team-section {
+  padding-bottom: var(--spacing-xl);
+}
+
+.team-container {
+  max-width: 900px;
+  width: 100%;
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  transition: var(--transition-smooth);
+}
+
+.team-member:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.team-member-image {
+  flex-shrink: 0;
+}
+
+.team-member-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  transition: var(--transition-smooth);
+}
+
+.team-member:hover .team-member-image img {
+  border-color: var(--color-text);
+}
+
+.team-member-info {
+  text-align: center;
+}
+
+.team-member-info h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
+}
+
+.team-member-title {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+.team-member-bio {
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-sm);
+  text-align: left;
+}
+
+.team-member-bio:last-child {
+  margin-bottom: 0;
+}
+
+/* Tablet and up - side by side layout */
+@media (min-width: 768px) {
+  .team-member {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .team-member-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .team-member-info {
+    text-align: left;
+  }
+
+  .team-member-info h2 {
+    text-align: left;
+  }
 }
 
 /* ========================================
@@ -425,8 +590,8 @@ p {
   width: 100%;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: var(--color-text);
   font-family: var(--font-body);
   font-size: 1rem;
   border-radius: 2px;
@@ -460,12 +625,12 @@ p {
 
 .info-item {
   margin-bottom: var(--spacing-sm);
-  color: var(--color-primary-lightest);
+  color: var(--color-text);
   text-align: center;
 }
 
 .info-item strong {
-  color: var(--color-white);
+  color: var(--color-text);
   display: block;
   margin-bottom: 0.25rem;
   font-weight: 500;
@@ -476,11 +641,11 @@ p {
    FOOTER
    ======================================== */
 .footer {
-  background: rgba(37, 59, 75, 0.5);
+  background: rgba(129, 143, 177, 0.95);
   backdrop-filter: blur(10px);
   padding: var(--spacing-md);
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .footer-content {
@@ -490,7 +655,7 @@ p {
 
 .footer p {
   font-size: 0.875rem;
-  color: var(--color-primary-light);
+  color: var(--color-text);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -502,7 +667,7 @@ p {
 }
 
 .social-links a {
-  color: var(--color-primary-light);
+  color: var(--color-text);
   text-decoration: none;
   font-size: 0.875rem;
   text-transform: uppercase;
@@ -511,7 +676,7 @@ p {
 }
 
 .social-links a:hover {
-  color: var(--color-white);
+  color: var(--color-accent-dark);
 }
 
 /* ========================================
@@ -521,7 +686,7 @@ p {
   display: none;
   background: none;
   border: none;
-  color: var(--color-white);
+  color: var(--color-text);
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
@@ -667,7 +832,7 @@ p {
 
 .booking-subtitle {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--color-primary-lightest);
+  color: var(--color-text);
   font-weight: 300;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -784,7 +949,7 @@ p {
 }
 
 .booking-modal-header h2 {
-  color: var(--color-white);
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: clamp(1.5rem, 4vw, 2rem);
   margin: 0 0 8px;
@@ -792,7 +957,7 @@ p {
 }
 
 .booking-modal-header p {
-  color: var(--color-primary-lightest);
+  color: var(--color-text);
   font-size: 0.9rem;
   margin: 0;
   letter-spacing: 0.1em;
@@ -949,7 +1114,7 @@ p {
 }
 
 .booking-page-header p {
-  color: var(--color-primary-lightest);
+  color: var(--color-text);
   font-size: clamp(1rem, 2vw, 1.125rem);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -975,7 +1140,7 @@ p {
 }
 
 .booking-widget-header h2 {
-  color: var(--color-white);
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: clamp(1.25rem, 3vw, 1.75rem);
   margin: 0;

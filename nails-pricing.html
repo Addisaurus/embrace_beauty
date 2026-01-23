@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Book your appointment at Embrace Beauty. Schedule spa, nail, and hair services online with our easy booking system.">
-    <meta name="keywords" content="book appointment, spa booking, nail appointment, hair salon booking, Embrace Beauty">
+    <meta name="description" content="Embrace Nails pricing - View our nail service menu including manicures, pedicures, and gel treatments.">
+    <meta name="keywords" content="nail prices, manicure cost, pedicure prices, gel nails, Embrace Beauty">
     <meta name="author" content="Embrace Beauty">
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Book Your Appointment - Embrace Beauty">
-    <meta property="og:description" content="Schedule your next spa, nail, or hair appointment online.">
-    <meta property="og:type" content="website">
-
-    <title>Book Your Appointment - Embrace Beauty</title>
+    <title>Nail Services Pricing - Embrace Beauty</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,48 +33,54 @@
                 <li><a href="team.html">Team</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn-nav" data-booking-modal>Book Now</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Booking Page Content -->
-    <main class="booking-page">
-        <div class="booking-page-container">
-            <header class="booking-page-header">
-                <h1>Book Your Appointment</h1>
-                <p>Schedule your next visit with us</p>
-            </header>
+    <!-- Pricing Section -->
+    <main>
+        <section class="page-section">
+            <div class="page-header">
+                <h1 class="page-title">Embrace Nails</h1>
+                <p class="page-subtitle">Service Menu & Pricing</p>
+            </div>
 
-            <!-- Vagaro Widget Container -->
-            <div class="booking-widget-container">
-                <div class="booking-widget-header">
-                    <h2>Select Your Service</h2>
+            <div class="pricing-container">
+                <div class="pricing-card">
+                    <div class="pricing-item">
+                        <span class="pricing-service">Classic Manicure</span>
+                        <span class="pricing-dots"></span>
+                        <span class="pricing-price">$30</span>
+                    </div>
+                    <div class="pricing-item">
+                        <span class="pricing-service">Gel Manicure</span>
+                        <span class="pricing-dots"></span>
+                        <span class="pricing-price">$40</span>
+                    </div>
+                    <div class="pricing-item">
+                        <span class="pricing-service">Express/Basic Pedi</span>
+                        <span class="pricing-dots"></span>
+                        <span class="pricing-price">$40</span>
+                    </div>
+                    <div class="pricing-item">
+                        <span class="pricing-service">Spa/Deluxe Pedi</span>
+                        <span class="pricing-dots"></span>
+                        <span class="pricing-price">$60</span>
+                    </div>
+                    <div class="pricing-item">
+                        <span class="pricing-service">Gel Pedicure</span>
+                        <span class="pricing-dots"></span>
+                        <span class="pricing-price">$70</span>
+                    </div>
                 </div>
-                <div class="booking-widget-body">
-                    <!-- Loading State -->
-                    <div class="booking-widget-loading">
-                        <div class="booking-spinner"></div>
-                        <p class="booking-loading-text">Loading booking system...</p>
-                    </div>
 
-                    <!-- Error State -->
-                    <div class="booking-widget-error">
-                        <div class="error-icon">!</div>
-                        <h3>Unable to Load Booking System</h3>
-                        <p>We're experiencing technical difficulties. Please try again or contact us directly.</p>
-                        <div class="error-actions">
-                            <button class="btn" onclick="location.reload()">Try Again</button>
-                            <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                        </div>
-                    </div>
-
-                    <!-- Vagaro Widget -->
-                    <div class="vagaro" style="width:100%; padding:0; border:0; margin:0 auto; text-align:center;">
-                        <script type="text/javascript" src="https://www.vagaro.com//resources/WidgetEmbeddedLoader/OZqqCJGpCpCcT3qmV35y6JuPlXiz3avV34mC2PeFJ4mC30m9dSycvCu7gevEhAJDXwOapcUbfY?v=ju4JxA9t11xkKJbkPviYyabIgFpSfzBkyKaGqkWGUzmW#"></script>
-                    </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="booking.html" class="btn btn-primary">Book an Appointment</a>
+                    <a href="services.html" class="btn" style="margin-left: 1rem;">Back to Services</a>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -123,7 +124,7 @@
         });
     </script>
 
-    <!-- Booking Widget Management -->
+    <!-- Booking Modal System -->
     <script src="js/booking.js"></script>
 </body>
 </html>
