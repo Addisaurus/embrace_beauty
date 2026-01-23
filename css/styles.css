@@ -735,7 +735,7 @@ p {
     right: -100%;
     width: 70%;
     height: 100vh;
-    background: rgba(37, 59, 75, 0.98);
+    background: rgba(59, 93, 117, 0.95);
     backdrop-filter: blur(20px);
     flex-direction: column;
     justify-content: center;
@@ -750,6 +750,10 @@ p {
 
   .nav-links li a {
     font-size: 1.25rem;
+  }
+
+  .nav-logo {
+    height: 80px;
   }
 
   .logo {
