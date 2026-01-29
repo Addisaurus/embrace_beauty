@@ -1251,3 +1251,30 @@ p {
     border-top-color: var(--color-primary-dark);
   }
 }
+
+/* ========================================
+   DARK MODE STYLES
+   Grey-toned dark mode instead of blue
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary-dark: #9a9a9a;
+    --color-primary-mid: #d4d4d4;
+    --color-primary-light: #c2c2c2;
+    --color-primary-lightest: #f0f0f0;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-text: #000000;
+    --color-accent-dark: #3d3d3d;
+  }
+
+  .hero-background,
+  .page-background {
+    background: linear-gradient(135deg, #9a9a9a 0%, #d4d4d4 100%);
+  }
+
+  .booking-modal-header,
+  .booking-widget-header {
+    background: linear-gradient(135deg, #9a9a9a, #d4d4d4);
+  }
+}
