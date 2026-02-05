@@ -1,0 +1,30 @@
+{
+  "title": "Embrace Beauty",
+  "tagline": "Your beauty is our passion",
+  "url": "https://www.embracebeauty.com",
+  "description": "Premium spa, nail, hair, and makeup services. A sanctuary for beauty and wellness.",
+  "location": {
+    "name": "[YOUR BUSINESS NAME]",
+    "street": "[YOUR STREET ADDRESS]",
+    "suite": "[SUITE NUMBER IF APPLICABLE]",
+    "city": "[YOUR CITY]",
+    "state": "[YOUR STATE]",
+    "zip": "[YOUR ZIP]",
+    "full": "[YOUR FULL ADDRESS]"
+  },
+  "phone": "[YOUR PHONE NUMBER]",
+  "email": "[YOUR EMAIL ADDRESS]",
+  "hours": {
+    "weekday": "[YOUR WEEKDAY HOURS]",
+    "saturday": "[YOUR SATURDAY HOURS]",
+    "sunday": "[YOUR SUNDAY HOURS OR 'Closed']"
+  },
+  "social": {
+    "instagram": "[YOUR INSTAGRAM URL]",
+    "facebook": "[YOUR FACEBOOK URL]"
+  },
+  "booking_url": "https://www.vagaro.com//resources/WidgetEmbeddedLoader/OZqqCJGpCpCcT3qmV35y6JuPlXiz3avV34mC2PeFJ4mC30m9dSycvCu7gevEhAJDXwOapcUbfY?v=ju4JxA9t11xkKJbkPviYyabIgFpSfzBkyKaGqkWGUzmW#",
+  "formspree_id": "[YOUR FORMSPREE FORM ID]",
+  "google_maps_embed": "[YOUR GOOGLE MAPS EMBED URL]",
+  "year": "2026"
+}

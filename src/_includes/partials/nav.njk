@@ -1,0 +1,21 @@
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo-link">
+      <img src="/images/logo.png" alt="{{ site.title }}" class="nav-logo" width="40" height="40">
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a></li>
+      <li><a href="/services/"{% if page.url == "/services/" %} aria-current="page"{% endif %}>Services & Pricing</a></li>
+      <li><a href="/team/"{% if page.url == "/team/" %} aria-current="page"{% endif %}>Our Team</a></li>
+      <li><a href="/gallery/"{% if page.url == "/gallery/" %} aria-current="page"{% endif %}>Gallery</a></li>
+      <li><a href="/contact/"{% if page.url == "/contact/" %} aria-current="page"{% endif %}>Contact</a></li>
+      <li><a href="/book/" class="btn-nav">Book Now</a></li>
+    </ul>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </div>
+</nav>

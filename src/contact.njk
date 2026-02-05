@@ -1,0 +1,116 @@
+---
+layout: base.njk
+title: Contact
+description: "Get in touch with Embrace Beauty. Find our location, hours, and send us a message."
+---
+
+<section class="section" style="padding-top: calc(var(--nav-height) + var(--space-xl));">
+  <div class="container">
+    <div class="text-center" style="margin-bottom: var(--space-lg);">
+      <p class="section-label">Get in Touch</p>
+      <h1 class="section-title">Contact Us</h1>
+      <p class="section-subtitle" style="margin: 0 auto;">Have a question or want to learn more? We'd love to hear from you.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      {# ---- Contact Form ---- #}
+      <div class="contact-form">
+        <!--
+          OWNER: To make this form work:
+          1. Go to https://formspree.io and create a free account
+          2. Create a new form and copy the form ID (looks like "xpzvqkdl")
+          3. Replace [YOUR FORMSPREE FORM ID] in src/_data/site.json with your form ID
+          4. Rebuild the site (npm run build)
+        -->
+        <h3 style="margin-bottom: var(--space-md);">Send Us a Message</h3>
+        <form id="contactForm" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interest</label>
+            <select id="service" name="service">
+              <option value="">Select a service</option>
+              <option value="nails">Nails</option>
+              <option value="spa">Spa & Skin</option>
+              <option value="massage">Massage</option>
+              <option value="hair-makeup">Hair & Makeup</option>
+              <option value="packages">Packages & Memberships</option>
+              <option value="general">General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Tell us how we can help..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width: 100%;">Send Message</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <h3>Message Sent!</h3>
+          <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+          <a href="/" class="btn btn--small" style="margin-top: var(--space-sm);">Back to Home</a>
+        </div>
+      </div>
+
+      {# ---- Contact Info ---- #}
+      <div class="contact-info-panel">
+        <div class="contact-detail">
+          <h4>Location</h4>
+          <!-- OWNER: Replace with your real address in src/_data/site.json -->
+          <p><span class="placeholder-highlight">{{ site.location.full }}</span></p>
+        </div>
+
+        <div class="contact-detail">
+          <h4>Phone</h4>
+          <p><a href="tel:{{ site.phone }}"><span class="placeholder-highlight">{{ site.phone }}</span></a></p>
+        </div>
+
+        <div class="contact-detail">
+          <h4>Email</h4>
+          <p><a href="mailto:{{ site.email }}"><span class="placeholder-highlight">{{ site.email }}</span></a></p>
+        </div>
+
+        <div class="contact-detail">
+          <h4>Hours</h4>
+          <p>
+            Monday - Friday: <span class="placeholder-highlight">{{ site.hours.weekday }}</span><br>
+            Saturday: <span class="placeholder-highlight">{{ site.hours.saturday }}</span><br>
+            Sunday: <span class="placeholder-highlight">{{ site.hours.sunday }}</span>
+          </p>
+        </div>
+
+        <div class="contact-detail">
+          <h4>Follow Us</h4>
+          <!-- OWNER: Replace with your real social media links in src/_data/site.json -->
+          <p>
+            <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer"><span class="placeholder-highlight">Instagram</span></a>
+            &nbsp;&middot;&nbsp;
+            <a href="{{ site.social.facebook }}" target="_blank" rel="noopener noreferrer"><span class="placeholder-highlight">Facebook</span></a>
+          </p>
+        </div>
+
+        {# ---- Map ---- #}
+        <div class="map-placeholder image-placeholder">
+          <div>
+            <span class="placeholder-label">Google Map</span>
+            <!-- OWNER: Replace this placeholder with a Google Maps embed.
+                 Go to Google Maps > search your address > Share > Embed a map > copy the iframe.
+                 Paste the embed URL into src/_data/site.json under google_maps_embed -->
+            <span>Embed your Google Maps location here</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

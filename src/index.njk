@@ -1,0 +1,130 @@
+---
+layout: base.njk
+title: Home
+description: "Premium spa, nail, hair, and makeup services. A sanctuary for beauty and wellness."
+---
+
+{# ---- Hero ---- #}
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <p class="section-label">Welcome to Embrace Beauty</p>
+      <h1>A Sanctuary for Beauty & Wellness</h1>
+      <!-- OWNER: Replace this paragraph with your own welcome message — what makes your spa special? -->
+      <p>Discover a space where expert care meets genuine warmth. From rejuvenating facials and therapeutic massage to flawless nails and stunning makeup, our team is here to help you look and feel your&nbsp;best.</p>
+      <div class="hero-actions">
+        <a href="/book/" class="btn btn--primary">Book an Appointment</a>
+        <a href="/services/" class="btn">View Services</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <!-- OWNER: Replace with a professional photo of your spa interior or a signature treatment -->
+      <div class="image-placeholder">
+        <div>
+          <span class="placeholder-label">Hero Photo</span>
+          <span>A welcoming shot of your spa interior or a signature treatment in progress</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ---- Featured Services ---- #}
+<section class="section section--alt">
+  <div class="container text-center">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle" style="margin: 0 auto;">Three distinctive experiences under one roof — each tailored to your unique needs.</p>
+
+    <div class="featured-services">
+      <div class="featured-card">
+        <h3>Nails</h3>
+        <p>Classic and gel manicures, spa pedicures, and meticulous nail care that lasts.</p>
+        <p class="price-from">Starting at $30</p>
+        <a href="/services/#nails" class="btn btn--small">View Pricing</a>
+      </div>
+      <div class="featured-card">
+        <h3>Spa & Skin</h3>
+        <p>Facials, therapeutic massage, waxing, lash and brow services, and holistic body treatments.</p>
+        <p class="price-from">Starting at $15</p>
+        <a href="/services/#spa" class="btn btn--small">View Pricing</a>
+      </div>
+      <div class="featured-card">
+        <h3>Hair & Makeup</h3>
+        <p>Professional makeup for every occasion, haircuts, and creative face and body art.</p>
+        <p class="price-from">Starting at $15</p>
+        <a href="/services/#hair-makeup" class="btn btn--small">View Pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ---- Testimonials ---- #}
+<section class="section">
+  <div class="container text-center">
+    <p class="section-label">What Our Clients Say</p>
+    <h2 class="section-title">Kind Words</h2>
+
+    <div class="testimonials-grid">
+      <!-- OWNER: Replace these with real client testimonials from Google Reviews, Yelp, or direct quotes -->
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>
+          <span class="placeholder-highlight">[CLIENT TESTIMONIAL #1 — Paste a real review from Google, Yelp, or a client message]</span>
+        </blockquote>
+        <cite><span class="placeholder-highlight">[Client Name]</span></cite>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>
+          <span class="placeholder-highlight">[CLIENT TESTIMONIAL #2]</span>
+        </blockquote>
+        <cite><span class="placeholder-highlight">[Client Name]</span></cite>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>
+          <span class="placeholder-highlight">[CLIENT TESTIMONIAL #3]</span>
+        </blockquote>
+        <cite><span class="placeholder-highlight">[Client Name]</span></cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ---- Location & Hours CTA ---- #}
+<section class="section section--sage">
+  <div class="container text-center">
+    <p class="section-label">Visit Us</p>
+    <h2 class="section-title">Come Say Hello</h2>
+    <p class="section-subtitle" style="margin: 0 auto;">We'd love to welcome you to our space.</p>
+
+    <div class="info-bar">
+      <div class="info-block">
+        <h4>Location</h4>
+        <!-- OWNER: Replace with your real address -->
+        <p><span class="placeholder-highlight">{{ site.location.full }}</span></p>
+      </div>
+      <div class="info-block">
+        <h4>Hours</h4>
+        <!-- OWNER: Replace with your real hours in src/_data/site.json -->
+        <p>
+          Mon - Fri: <span class="placeholder-highlight">{{ site.hours.weekday }}</span><br>
+          Sat: <span class="placeholder-highlight">{{ site.hours.saturday }}</span><br>
+          Sun: <span class="placeholder-highlight">{{ site.hours.sunday }}</span>
+        </p>
+      </div>
+      <div class="info-block">
+        <h4>Get in Touch</h4>
+        <p>
+          <a href="tel:{{ site.phone }}"><span class="placeholder-highlight">{{ site.phone }}</span></a><br>
+          <a href="mailto:{{ site.email }}"><span class="placeholder-highlight">{{ site.email }}</span></a>
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top: var(--space-lg);">
+      <a href="/book/" class="btn btn--light">Book Your Visit</a>
+    </div>
+  </div>
+</section>

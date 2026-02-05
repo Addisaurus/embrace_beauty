@@ -1,0 +1,49 @@
+---
+layout: base.njk
+title: Book Your Appointment
+description: "Schedule your next spa, nail, massage, hair, or makeup appointment online at Embrace Beauty."
+---
+
+<section class="booking-page">
+  <div class="container">
+    <div class="booking-header">
+      <p class="section-label">Online Booking</p>
+      <h1>Book Your Appointment</h1>
+      <p>Select a service and choose a time that works for you.</p>
+    </div>
+
+    <div class="booking-widget-wrap">
+      <div class="booking-loading" id="bookingLoading">
+        <div class="booking-spinner"></div>
+        <p>Loading booking system...</p>
+      </div>
+      <div class="booking-fallback" id="bookingFallback" style="display:none; text-align:center; padding: var(--space-lg);">
+        <p>Having trouble loading? <a href="/contact/">Contact us</a> to book by phone.</p>
+      </div>
+      <div class="vagaro" style="width:100%; text-align:center;">
+        <script type="text/javascript" src="{{ site.booking_url }}"></script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Hide loading spinner once Vagaro widget loads
+  (function() {
+    var loader = document.getElementById('bookingLoading');
+    var fallback = document.getElementById('bookingFallback');
+    var attempts = 0;
+    var check = setInterval(function() {
+      attempts++;
+      var frame = document.querySelector('.booking-widget-wrap iframe');
+      if (frame && frame.offsetHeight > 100) {
+        loader.classList.add('hidden');
+        clearInterval(check);
+      } else if (attempts >= 100) {
+        loader.classList.add('hidden');
+        fallback.style.display = 'block';
+        clearInterval(check);
+      }
+    }, 100);
+  })();
+</script>
