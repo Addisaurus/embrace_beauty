@@ -1,29 +1,18 @@
 ---
 layout: base.njk
 title: Home
-description: "Premium spa, nail, hair, and makeup services. A sanctuary for beauty and wellness."
+description: "Premium spa, nail, hair, and makeup services. Elevate your natural radiance."
 ---
 
 {# ---- Hero ---- #}
 <section class="hero">
   <div class="container">
+    <img src="/images/logo.png" alt="Embrace Beauty" class="hero-logo" width="380" height="380">
     <div class="hero-content">
-      <p class="section-label">Welcome to Embrace Beauty</p>
-      <h1>A Sanctuary for Beauty & Wellness</h1>
-      <!-- OWNER: Replace this paragraph with your own welcome message — what makes your spa special? -->
-      <p>Discover a space where expert care meets genuine warmth. From rejuvenating facials and therapeutic massage to flawless nails and stunning makeup, our team is here to help you look and feel your&nbsp;best.</p>
+      <h1>Elevate Your Natural Radiance</h1>
       <div class="hero-actions">
         <a href="/book/" class="btn btn--primary">Book an Appointment</a>
         <a href="/services/" class="btn">View Services</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <!-- OWNER: Replace with a professional photo of your spa interior or a signature treatment -->
-      <div class="image-placeholder">
-        <div>
-          <span class="placeholder-label">Hero Photo</span>
-          <span>A welcoming shot of your spa interior or a signature treatment in progress</span>
-        </div>
       </div>
     </div>
   </div>
@@ -32,9 +21,7 @@ description: "Premium spa, nail, hair, and makeup services. A sanctuary for beau
 {# ---- Featured Services ---- #}
 <section class="section section--alt">
   <div class="container text-center">
-    <p class="section-label">What We Offer</p>
     <h2 class="section-title">Our Services</h2>
-    <p class="section-subtitle" style="margin: 0 auto;">Three distinctive experiences under one roof — each tailored to your unique needs.</p>
 
     <div class="featured-services">
       <div class="featured-card">
@@ -59,46 +46,9 @@ description: "Premium spa, nail, hair, and makeup services. A sanctuary for beau
   </div>
 </section>
 
-{# ---- Testimonials ---- #}
-<section class="section">
-  <div class="container text-center">
-    <p class="section-label">What Our Clients Say</p>
-    <h2 class="section-title">Kind Words</h2>
-
-    <div class="testimonials-grid">
-      <!-- OWNER: Replace these with real client testimonials from Google Reviews, Yelp, or direct quotes -->
-      <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>
-          <span class="placeholder-highlight">[CLIENT TESTIMONIAL #1 — Paste a real review from Google, Yelp, or a client message]</span>
-        </blockquote>
-        <cite><span class="placeholder-highlight">[Client Name]</span></cite>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>
-          <span class="placeholder-highlight">[CLIENT TESTIMONIAL #2]</span>
-        </blockquote>
-        <cite><span class="placeholder-highlight">[Client Name]</span></cite>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>
-          <span class="placeholder-highlight">[CLIENT TESTIMONIAL #3]</span>
-        </blockquote>
-        <cite><span class="placeholder-highlight">[Client Name]</span></cite>
-      </div>
-    </div>
-  </div>
-</section>
-
-{# ---- Location & Hours CTA ---- #}
+{# ---- Location & Hours ---- #}
 <section class="section section--sage">
   <div class="container text-center">
-    <p class="section-label">Visit Us</p>
-    <h2 class="section-title">Come Say Hello</h2>
-    <p class="section-subtitle" style="margin: 0 auto;">We'd love to welcome you to our space.</p>
-
     <div class="info-bar">
       <div class="info-block">
         <h4>Location</h4>
@@ -121,10 +71,6 @@ description: "Premium spa, nail, hair, and makeup services. A sanctuary for beau
           <a href="mailto:{{ site.email }}"><span class="placeholder-highlight">{{ site.email }}</span></a>
         </p>
       </div>
-    </div>
-
-    <div style="margin-top: var(--space-lg);">
-      <a href="/book/" class="btn btn--light">Book Your Visit</a>
     </div>
   </div>
 </section>
