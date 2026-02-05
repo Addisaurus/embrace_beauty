@@ -7,12 +7,12 @@ description: "Premium spa, nail, hair, and makeup services. Elevate your natural
 {# ---- Hero ---- #}
 <section class="hero">
   <div class="container">
-    <img src="/images/logo.png" alt="Embrace Beauty" class="hero-logo" width="380" height="380">
+    <img src="{{ '/images/logo.png' | url }}" alt="Embrace Beauty" class="hero-logo" width="380" height="380">
     <div class="hero-content">
       <h1>Elevate Your Natural Radiance</h1>
       <div class="hero-actions">
-        <a href="/book/" class="btn btn--primary">Book an Appointment</a>
-        <a href="/services/" class="btn">View Services</a>
+        <a href="{{ '/book/' | url }}" class="btn btn--primary">Book an Appointment</a>
+        <a href="{{ '/services/' | url }}" class="btn">View Services</a>
       </div>
     </div>
   </div>
@@ -28,19 +28,19 @@ description: "Premium spa, nail, hair, and makeup services. Elevate your natural
         <h3>Nails</h3>
         <p>Classic and gel manicures, spa pedicures, and meticulous nail care that lasts.</p>
         <p class="price-from">Starting at $30</p>
-        <a href="/services/#nails" class="btn btn--small">View Pricing</a>
+        <a href="{{ '/services/' | url }}#nails" class="btn btn--small">View Pricing</a>
       </div>
       <div class="featured-card">
         <h3>Spa & Skin</h3>
         <p>Facials, therapeutic massage, waxing, lash and brow services, and holistic body treatments.</p>
         <p class="price-from">Starting at $15</p>
-        <a href="/services/#spa" class="btn btn--small">View Pricing</a>
+        <a href="{{ '/services/' | url }}#spa" class="btn btn--small">View Pricing</a>
       </div>
       <div class="featured-card">
         <h3>Hair & Makeup</h3>
         <p>Professional makeup for every occasion, haircuts, and creative face and body art.</p>
         <p class="price-from">Starting at $15</p>
-        <a href="/services/#hair-makeup" class="btn btn--small">View Pricing</a>
+        <a href="{{ '/services/' | url }}#hair-makeup" class="btn btn--small">View Pricing</a>
       </div>
     </div>
   </div>

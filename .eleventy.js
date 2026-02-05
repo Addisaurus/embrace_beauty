@@ -13,6 +13,7 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       data: "_data",
     },
+    pathPrefix: "/embrace_beauty/",
     templateFormats: ["njk", "md", "html"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
